@@ -43,6 +43,7 @@ public class WineDAO {
 	
 	public void delete(int id) {
 		em.remove(getWine(id));
+		em.persit(wine);
 	}
 	public void deleteTable(){
 		em.createQuery("DELETE FROM Wine").executeUpdate();
